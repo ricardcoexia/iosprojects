@@ -1,23 +1,100 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="2500" translatesAutoresizingMaskIntoConstraints="NO" id="48z-td-xkD">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="9Yj-8V-PTx"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="slider:" destination="2" eventType="valueChanged" id="Oo2-sA-2f0"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvK-xx-vas">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="glp-JQ-QT9">
+                                <connections>
+                                    <action selector="stepper:" destination="2" eventType="valueChanged" id="zCJ-zE-vd0"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoG-Lv-Ogc">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="g4U-Jw-mVo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fy7-Le-zGq">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="8pL-mz-Rei"/>
+                                    <constraint firstAttribute="height" constant="99" id="Eux-5J-PpP"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="RKK-KF-zql">
+                                <connections>
+                                    <action selector="changePage:" destination="2" eventType="valueChanged" id="wzh-lc-wW7"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YoG-Lv-Ogc" firstAttribute="bottom" secondItem="glp-JQ-QT9" secondAttribute="bottom" type="default" id="8Fz-1z-y3f"/>
+                            <constraint firstAttribute="bottom" secondItem="RKK-KF-zql" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="E29-2F-EcJ"/>
+                            <constraint firstItem="YoG-Lv-Ogc" firstAttribute="leading" secondItem="vvK-xx-vas" secondAttribute="leading" type="default" id="Egt-jv-0bM"/>
+                            <constraint firstAttribute="trailing" secondItem="YoG-Lv-Ogc" secondAttribute="trailing" constant="37" id="UnX-ar-ujW"/>
+                            <constraint firstItem="Fy7-Le-zGq" firstAttribute="top" secondItem="3" secondAttribute="top" constant="158" id="VaD-P1-YJh"/>
+                            <constraint firstItem="48z-td-xkD" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="26" id="XGA-7t-1Ti"/>
+                            <constraint firstItem="RKK-KF-zql" firstAttribute="centerX" secondItem="Fy7-Le-zGq" secondAttribute="centerX" type="default" id="Zr2-1q-4bO"/>
+                            <constraint firstItem="48z-td-xkD" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="kBX-CA-UuZ"/>
+                            <constraint firstItem="glp-JQ-QT9" firstAttribute="top" secondItem="3" secondAttribute="top" constant="84" id="kKk-DE-CXT"/>
+                            <constraint firstItem="vvK-xx-vas" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="pww-iS-iB2"/>
+                            <constraint firstItem="glp-JQ-QT9" firstAttribute="leading" secondItem="48z-td-xkD" secondAttribute="leading" type="default" id="vVn-Rg-c0C"/>
+                            <constraint firstItem="Fy7-Le-zGq" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="40" id="zfl-G0-WvO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="vvK-xx-vas" id="iK2-Um-fu0"/>
+                        <outlet property="stepperLabel" destination="YoG-Lv-Ogc" id="IN6-3G-uHt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="changePage:"/>
+                <relationship kind="action" name="slider:"/>
+                <relationship kind="action" name="stepper:"/>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="stepperLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
