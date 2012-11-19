@@ -16,6 +16,10 @@
 		0FF71794165A2F1400D2BD35 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF71793165A2F1400D2BD35 /* Default.png */; };
 		0FF71796165A2F1400D2BD35 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF71795165A2F1400D2BD35 /* Default@2x.png */; };
 		0FF71798165A2F1400D2BD35 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF71797165A2F1400D2BD35 /* Default-568h@2x.png */; };
+		0FF717A1165A2F4200D2BD35 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7179F165A2F4200D2BD35 /* ListViewController.m */; };
+		0FF717A2165A2F4200D2BD35 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FF717A0165A2F4200D2BD35 /* ListViewController.xib */; };
+		0FF717A7165A343500D2BD35 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF717A5165A343500D2BD35 /* DetailViewController.m */; };
+		0FF717A8165A343500D2BD35 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FF717A6165A343500D2BD35 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,12 @@
 		0FF71793165A2F1400D2BD35 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0FF71795165A2F1400D2BD35 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		0FF71797165A2F1400D2BD35 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0FF7179E165A2F4200D2BD35 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		0FF7179F165A2F4200D2BD35 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		0FF717A0165A2F4200D2BD35 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		0FF717A4165A343500D2BD35 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		0FF717A5165A343500D2BD35 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		0FF717A6165A343500D2BD35 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +91,8 @@
 				0FF71790165A2F1400D2BD35 /* AppDelegate.h */,
 				0FF71791165A2F1400D2BD35 /* AppDelegate.m */,
 				0FF71788165A2F1400D2BD35 /* Supporting Files */,
+				0FF717A3165A2F4500D2BD35 /* tabla */,
+				0FF717A9165A343800D2BD35 /* Detalle */,
 			);
 			path = TablaClaves;
 			sourceTree = "<group>";
@@ -97,6 +109,26 @@
 				0FF71797165A2F1400D2BD35 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0FF717A3165A2F4500D2BD35 /* tabla */ = {
+			isa = PBXGroup;
+			children = (
+				0FF7179E165A2F4200D2BD35 /* ListViewController.h */,
+				0FF7179F165A2F4200D2BD35 /* ListViewController.m */,
+				0FF717A0165A2F4200D2BD35 /* ListViewController.xib */,
+			);
+			name = tabla;
+			sourceTree = "<group>";
+		};
+		0FF717A9165A343800D2BD35 /* Detalle */ = {
+			isa = PBXGroup;
+			children = (
+				0FF717A4165A343500D2BD35 /* DetailViewController.h */,
+				0FF717A5165A343500D2BD35 /* DetailViewController.m */,
+				0FF717A6165A343500D2BD35 /* DetailViewController.xib */,
+			);
+			name = Detalle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +186,8 @@
 				0FF71794165A2F1400D2BD35 /* Default.png in Resources */,
 				0FF71796165A2F1400D2BD35 /* Default@2x.png in Resources */,
 				0FF71798165A2F1400D2BD35 /* Default-568h@2x.png in Resources */,
+				0FF717A2165A2F4200D2BD35 /* ListViewController.xib in Resources */,
+				0FF717A8165A343500D2BD35 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +200,8 @@
 			files = (
 				0FF7178E165A2F1400D2BD35 /* main.m in Sources */,
 				0FF71792165A2F1400D2BD35 /* AppDelegate.m in Sources */,
+				0FF717A1165A2F4200D2BD35 /* ListViewController.m in Sources */,
+				0FF717A7165A343500D2BD35 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
