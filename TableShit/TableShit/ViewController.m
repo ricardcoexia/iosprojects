@@ -8,8 +8,12 @@
 
 #import "ViewController.h"
 #import "SimpleTableCell.h"
+#import "DetailPageViewController.h"
 
 @interface ViewController ()
+
+@property(nonatomic, strong) IBOutlet UITableView *tableView;
+
 
 @end
 
@@ -18,7 +22,7 @@
     NSMutableArray *tableData;
     NSMutableArray *lovesData;
      NSMutableArray *sizesData;
-
+    
 }
 
 
@@ -72,4 +76,30 @@
 {
     return 121;
 }
+
+
+/*
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    [self performSegueWithIdentifier:@"showDetailPage" sender:indexPath];
+          
+}
+
+*/
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+
+   
+    NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+    DetailPageViewController *detailViewController = [segue destinationViewController];
+    detailViewController.play = [ViewController objectInListAtIndex:selectedRowIndex.row];
+
+
+}
+
+
 @end
