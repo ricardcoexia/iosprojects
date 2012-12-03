@@ -42,15 +42,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showDetailPage"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        ViewController *destViewController = segue.destinationViewController;
-        //destViewController.textLabel = [tableData objectAtIndex:indexPath.row];
-    }
-}
-
-
 @end
 
 
